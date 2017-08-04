@@ -1,0 +1,26 @@
+Software requirements
+----------------------
+
+- python2.7
+- numpy >= 1.8.0
+- scipy >= 0.13.2
+- statsmodels >= 0.8.0
+- rpy2 >= 2.8.5
+
+Execution command
+------------------
+
+python2.7 predictPrice.py <dir-name> <file-name>
+
+dir-name: location of price data
+file-name: file on which to predict the price
+
+Output: RMSE and percentage error for day ahead price predictions
+
+Example
+--------
+
+$ python2.7 predictPrice.py ../../priceSuite/price_data/ Illinois.csv
+RMSE ($): 9.46511770603
+Average percentage error: 17.4284104925
+

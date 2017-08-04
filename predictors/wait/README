@@ -1,0 +1,41 @@
+Packages required
+----------------
+
+sklearn >= 0.13
+scipy >= 0.14
+
+
+Run command
+------------
+
+To run the queue wait time predictor on the ANL trace use the following command:
+
+$python2.7 QueueWaitingTime.py <swf-file-name> <max-cores-in-the-machine>
+
+This will give the actual and predicted queue waiting time values for each job. Ignore the last field.
+
+For example, to run on the ANL trace:
+
+$python QueueWaitingTime.py ANL-Intrepid-2009-1.swf 163840
+
+Starting...
+
+16000
+Feature logic
+/usr/local/lib/python2.7/site-packages/numpy/lib/function_base.py:1945: RuntimeWarning: invalid value encountered in true_divide
+  return c / sqrt(multiply.outer(d, d))
+20001 actual= 1069 pred= 2152.67897154 run= 3527
+20002 actual= 334 pred= 30 run= 9038
+20003 actual= 1190 pred= 6209.88053789 run= 9051
+20004 actual= 1197 pred= 334 run= 9033
+20005 actual= 10904 pred= 6766.82461068 run= 3429
+20006 actual= 7747 pred= 34 run= 9123
+20007 actual= 7534 pred= 34 run= 9045
+20008 actual= 9781 pred= 7591.33426188 run= 3407
+20009 actual= 10302 pred= 8421.56265013 run= 3471
+20010 actual= 63 pred= 190 run= 3599
+
+---
+
+Notes:
+There will be some numpy/scipy warnings while running the code. They can be ignored.
